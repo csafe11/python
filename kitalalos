@@ -1,0 +1,8 @@
+ker = int(input("Tippelj!"))
+gond = 6
+while gond != ker:
+    print("Nem ez az!")
+    ker = int(input("Tippelj!"))
+    if gond == ker:
+        print(f"Igen, ez az, a {gond}!")
+        break
