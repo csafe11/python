@@ -1,0 +1,37 @@
+# 1.1 Feladat
+# Készíts egy programot, amely a felhasználó által megadott mondatról a mondatvégi
+# jel alapján eldönti milyen fajtájú! (kijelentő, kérdő, felkiáltó / felszólító / óhatjtó)
+
+mondat = input('Írj egy mondatot, és a program eldönti, hogy milyen fajtájú: ')
+
+for i in mondat:
+     if i[-1] == "!":
+         print("Ez felkiáltó / felszólító / óhajtó modat.")
+     elif i[-1] == "?":
+         print("Ez kérdő mondat.")
+     elif i[-1] == ".":
+         print("Ez kijelentő mondat.")
+ print("A program működik és kilép.")
+
+# 1.2 Feladat
+# Az előbbi programot módosítsd úgy,
+# hogy újabb és újabb mondatot kérjen be a program (amig a felhasználó csak egy ENTER-t nem üt),
+# majd állapítsa meg, és írja ki mineden egyes alkalommal a mondat fajtáját!
+
+
+
+while mondat != '':
+        if mondat[-1] == "!":
+            print("Ez felkiáltó / felszólító / óhajtó modat.")
+            mondat = input('Írj egy mondatot, és a program eldönti, hogy milyen fajtájú: ')
+        elif mondat[-1] == "?":
+            print("Ez kérdő mondat.")
+            mondat = input('Írj egy mondatot, és a program eldönti, hogy milyen fajtájú: ')
+        elif mondat[-1] == ".":
+            print("Ez kijelentő mondat.")
+            mondat = input('Írj egy mondatot, és a program eldönti, hogy milyen fajtájú: ')
+        else:
+            print("Nem adtál meg modatvégi írásjelet")
+            mondat = input('Írj egy mondatot, és a program eldönti, hogy milyen fajtájú: ')
+
+
