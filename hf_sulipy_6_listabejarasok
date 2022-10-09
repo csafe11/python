@@ -1,0 +1,36 @@
+import  random
+
+# 1. feladat
+# Készíts egy programot, amely [1; 40] intervallumon kiírja a 3-mal osztható számokat!
+
+for i in range(0,40):
+    if i % 3 == 0:
+        print(f'Első Feladat: {i}')
+
+# 2.1 feladat
+# Az adott lista (amely a 'Próbáld ki!' gombra kattintva elérhető) elemei közül a program kiírja a "t" és "T" betűkkel kezdődőeket!
+
+szavak = ['ajtó','tojás','Ottó','Tamás', 'tép','Tesla','alma','python']
+szavakTvel = []
+
+for i in szavak:
+    if i[0] == "t" or i[0] == "T":
+        print(f'2.1. feladat: {i}')
+
+# 2.2 feladat
+# Az előző programot alakítsd át úgy, hogy a feltételeknek megfelelő szavak kerüljenek rögzítésre egy másik listában is, és ez utóbbi listát írja ki a program a képernyőre!
+
+for i in szavak:
+    if i[0] == "t" or i[0] == "T":
+        szavakTvel.append(i)
+
+print(f'2.2. feladat: {szavakTvel}')
+
+# 3. feladat
+# Az adott lista (→ 'Próbáld ki!') elemei közül a program kiírja a 3-mal osztható páros számokat!
+
+szamok = [120, 9, 5, 24, 6, 17, -45, 92, 15, 48, 57]
+
+for i in szamok:
+    if i%3 == 0 and i%2 ==0:
+        print(f'A hárommal és kettővel osztható számok:  {i}')
