@@ -1,0 +1,16 @@
+# 1.1 feladat
+#A program tároljon egy listában színeket. Kérjen be a felhasználótól egy színt, és állapítsa meg, hogy a megadott szín már szerepel-e az adott listában.
+#A vizsgálat eredményéről tájékoztassa a program a felhasználót, és írja ki egymás mellé vesszővel elválasztva a lista által tartalmazott színeket!
+
+paletta = ['kék', 'piros', 'fehér', 'fekete', 'zöld', 'sárga', 'barna', 'piros', 'fehér', 'szürke']
+
+ker = input("Adj meg egy színt: ")
+
+if ker in paletta:
+  
+    print(f"Ezt a színt tartalmazza a lista!")
+else:
+    print("Ezt a színt nem tartalmazza a lista!")
+
+for i in paletta:
+  print(i, end=", ")
