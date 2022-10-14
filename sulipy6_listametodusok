@@ -41,3 +41,30 @@ paletta.append(kert)
 
 for i in paletta:
     print(i, end=", ")
+   
+   
+   --------------------------------------------------------------------------------------------------------------------------------------------
+    
+    import random
+
+        # 2. Feladat
+# A program generáljon 10 darab véletlenszámot [1;3] intervallumon, ezeket tárolja egy listában, a lista tartalmát írja ki a képernyőre!
+# A felhasználónak legyen lehetősége megadni egy számot [1;3] intervallumon, és a program törölje ennek a számnak valamennyi előfordulását
+# a listából, majd írja ki a módosított listát a képernyőre
+
+lista = []
+
+i = 0
+while i <= 9:
+    lista.append(random.randrange(1, 4))
+    i += 1
+print(lista)
+
+szam = int(input("Melyik számot töröljem al istából? "))
+
+for i in range(len(lista)):
+    if szam in lista:
+        lista.remove(szam)
+print(lista)
+
+
