@@ -67,4 +67,6 @@ for i in range(len(lista)):
         lista.remove(szam)
 print(lista)
 
-
+# Lambda megoldással
+toroltLista = list(filter(lambda x: x != szam, lista))
+print(toroltLista)
