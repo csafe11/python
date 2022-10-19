@@ -1,0 +1,55 @@
+# 1. feladat
+# Írj eljárást, amely egy tetszőleges szöveget, ill. alakzatot ír ki a képernyőre!
+
+def kiir():
+  print(("Tetszőleges szöveg"))
+
+kiir()
+
+# 2. Feladat
+# Írj eljárást, amely paraméterül kapott számról eldönti, és a képernyőre kiírja, hogy negatív, pozitív vagy nulla-e!
+
+def eldont(szam):
+  if szam > 0:
+    print("Ez pozitív!")
+  elif szam == 0:
+    print("Ez nulla!")
+  else:
+    print("Ez negatív!")
+
+eldont()
+
+# 3. Feladat
+# Írj eljárást, amely paraméterül kapott 2 számot összehasonlít, és a képernyőre kiírja, melyik a nagyobb szám! Kezeld azt az esetet is, ha a két szám egyenlő!
+
+def eldont(a, b):
+  if a > b:
+    print("Az első szám nagyobb.")
+  elif a < b:
+    print("A második szám nagyobb.")
+  else:
+    print("A két szám egyenlő")
+
+eldont(3, 6)
+
+# 4. Feladat
+# Írj egy programot, amely a felhasználótól bekér 3 szót, ezeket egy listában tárolja, és egy eljárás segítségével meghatározza, és a képernyőre kiírja, melyik a legrövidebb szó!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
