@@ -1,0 +1,11 @@
+def hitelosszeg(atlagfizetes):
+    if atlagfizetes > 100000:
+        hitel = atlagfizetes * 3
+    else:
+        hitel = 0
+    print(f"{nev} által felvető folyószámla hitel összege: {hitel}")
+
+
+for i in range(3):
+    nev = input("Add meg a leendő adós nevét: ")
+    hitelosszeg(int(input("Add meg a leendő adós három havi átlagfizetését: ")))
