@@ -1,39 +1,82 @@
-# 1. feladat
-# Írj eljárást, amely egy tetszőleges szöveget, ill. alakzatot ír ki a képernyőre!
-
-def kiir():
-  print(("Tetszőleges szöveg"))
-
-kiir()
-
-# 2. Feladat
-# Írj eljárást, amely paraméterül kapott számról eldönti, és a képernyőre kiírja, hogy negatív, pozitív vagy nulla-e!
-
+#  1. Feladat
+#  Írj eljárást, amely egy tetszőleges szöveget, ill. alakzatot ír ki a képernyőre!
+#
+def kiir(x):
+     print(x)
+kiir("DFSFFHFDGHFGHSHDFHFH")
+#
+# # 2. Feladat
+# # Írj eljárást, amely paraméterül kapott számról eldönti, és a képernyőre kiírja, hogy negatív, pozitív vagy nulla-e!
+#
 def eldont(szam):
-  if szam > 0:
-    print("Ez pozitív!")
-  elif szam == 0:
-    print("Ez nulla!")
-  else:
-    print("Ez negatív!")
+     if szam > 0:
+         print("Ez pozitív!")
+     elif szam < 0:
+         print("Ez negatív!")
+     else:
+         print("Hát ez nulla!")
+eldont(int(input("Kérek egy számot: ")))
+#
+# # 3. Feladat
+# # Írj eljárást, amely paraméterül kapott 2 számot összehasonlít, és a képernyőre kiírja,
+# # melyik a nagyobb szám! Kezeld azt az esetet is, ha a két szám egyenlő!
+#
+def osszehasonlit(x,y):
+    if x > y:
+        print("Az első szám a nagyobb!")
+    elif y > x:
+        print("A második szám a nagyobb!")
+    else:
+        print("Egyenlőek!")
 
-eldont()
+a = int(input("Kérem az első számot! "))
+b = int(input("Kérem a második számot! "))
 
-# 3. Feladat
-# Írj eljárást, amely paraméterül kapott 2 számot összehasonlít, és a képernyőre kiírja, melyik a nagyobb szám! Kezeld azt az esetet is, ha a két szám egyenlő!
+osszehasonlit(a,b)
+#
+# # 4. Feladat
+# # Írj egy programot, amely a felhasználótól bekér 3 szót,
+# # ezeket egy listában tárolja, és egy eljárás segítségével meghatározza,
+# # és a képernyőre kiírja, melyik a legrövidebb szó!
+#
+# # 5.1 Feladat
+# # A "Próbáld ki!" gombra kattintva elérhető egy program, ami egy eljárás segítségével kirajzol a képernyőre egy 6x3-as mezőt.
+# # Alakítsd át ezt a programot úgy, az eljárás hívásakor megadott értékpárnak megfelelően
+# # a program az adott pozícióba 'O' helyett '+' jelet írjon ki. A lenti példában az eljárás hivása: mezot_rajzol(0,4)
 
-def eldont(a, b):
-  if a > b:
-    print("Az első szám nagyobb.")
-  elif a < b:
-    print("A második szám nagyobb.")
-  else:
-    print("A két szám egyenlő")
+def mezot_rajzol(x,y):
+    for i in range(3):
+        for j in range(6):
+            if(i == x and j == y):
+                print("+", end="")
+            else:
+                print("O", end="")
+        print()
 
-eldont(3, 6)
+mezot_rajzol(0,4)
 
-# 4. Feladat
-# Írj egy programot, amely a felhasználótól bekér 3 szót, ezeket egy listában tárolja, és egy eljárás segítségével meghatározza, és a képernyőre kiírja, melyik a legrövidebb szó!
+# 5.2 Feladat
+# Alakítsd át az előző programot úgy, hogy a felhasználó adhassa meg a koordinátákat, ahová a
+# program 'O' helyett '+' jelet ír. A koordináták bekérése és a mező kirajzolása addig ismétlődjön, amíg a felhasználó
+# negatív számot nem ad meg koordinátaként!
+
+
+def mezot_rajzol(x,y):
+    for i in range(3):
+        for j in range(6):
+                if(i == x and j == y):
+                    print("+", end="")
+                else:
+                    print("O", end="")
+        print()
+
+while True:
+  x= int(input("Kérem a sort! "))
+  y= int(input("Kérem a oszlopot! "))
+  if x < 0 or y <0:
+    break
+  mezot_rajzol(x, y)
+
 
 
 
