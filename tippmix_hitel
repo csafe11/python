@@ -1,0 +1,28 @@
+tippm = []
+
+with open ("eredmenyek.txt", "r", encoding="utf-8") as f:
+    for veger in f:
+        adat = veger.strip()
+        tippm.append(adat)
+    print("Az adott héten a következő eredmények születtek:")
+    print(f'A két csapat összesen {len(tippm)} mérkőzést játszott egymással.')
+
+k = tippm.count("A")
+print(f'A(z) A csapat összesen {k} mérkőzést nyert')
+l = tippm.count("B")
+print(f'A(z) A csapat összesen {l} mérkőzést nyert')
+d = tippm.count("X")
+print(f'A két csapat összesen {d} esetben játszott döntetlent.')
+
+
+def hitelosszeg(atlagfizetes):
+    if atlagfizetes > 100000:
+        hitel = atlagfizetes * 3
+    else:
+        hitel = 0
+    print(f"{nev} által felvető folyószámla hitel összege: {hitel}")
+
+
+for i in range(3):
+    nev = input("Add meg a leendő adós nevét: ")
+    hitelosszeg(int(input("Add meg a leendő adós három havi átlagfizetését: ")))
